@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reselio — kupujesz, wystawiasz, sprzedajesz i widzisz wynik</title>
+    <meta
+        name="description"
+        content="Reselio to lokalna aplikacja iOS dla resellerów. Ogarnia zakupy, magazyn, wystawienia, sprzedaż, koszty, zdjęcia, backupy i realny wynik."
+    >
+    <meta name="theme-color" content="#081F5C">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-orb site-orb-one" aria-hidden="true"></div>
+    <div class="site-orb site-orb-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="#top" aria-label="Reselio">
+                <span class="brand-mark" aria-hidden="true">
+                    <span class="brand-mark-grid"></span>
+                    <span class="brand-mark-tag"></span>
+                    <span class="brand-mark-arrow"></span>
+                </span>
+                <span class="brand-copy">
+                    <strong>Reselio</strong>
+                    <small>Local-first resale tracker</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" aria-label="Nawigacja główna">
+                <a href="#features">Funkcje</a>
+                <a href="#workflow">Jak działa</a>
+                <a href="#showcase">Ekrany</a>
+                <a href="#trust">Prywatność</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <a class="button button-nav js-primary-cta" href="#download">Pobierz</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section" id="top">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Aplikacja iPhone dla resellerów</p>
+                    <h1>Kupujesz pod odsprzedaż? Wreszcie widzisz, co naprawdę zarabia.</h1>
+                    <p class="lead">
+                        Reselio porządkuje zakupy, magazyn, wystawienia, sprzedaż, koszty,
+                        zdjęcia i backupy w jednym, lokalnym workflow. Bez chaosu w notatkach,
+                        bez ręcznego sklejania danych, bez zgadywania, gdzie uciekła marża.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary js-primary-cta" href="#download">Pobierz z App Store</a>
+                        <a class="button button-secondary" href="#features">Zobacz funkcje</a>
+                    </div>
+
+                    <div class="hero-pills">
+                        <span>Lokalnie na urządzeniu</span>
+                        <span>Magazyn + sprzedaż + wynik</span>
+                        <span>Zdjęcia, CSV i backup</span>
+                    </div>
+                </div>
+
+                <div class="hero-stage reveal">
+                    <div class="floating-card floating-card-top">
+                        <span class="floating-label">Dlaczego działa</span>
+                        <strong>Jedna aplikacja zamiast arkusza, notatek i pamiętania „na oko”.</strong>
+                    </div>
+
+                    <article class="device device-hero">
+                        <div class="device-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="device-screen" id="hero-shot"></div>
+                    </article>
+
+                    <div class="floating-card floating-card-bottom">
+                        <span class="floating-label">W praktyce</span>
+                        <ul class="floating-list">
+                            <li>kontrola partii i ilości</li>
+                            <li>sprzedaż z kosztami</li>
+                            <li>archiwum bez utraty raportów</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-benefits" id="features">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Jedno miejsce zamiast chaosu</p>
+                    <h2>Od zakupu do wyniku bez przeskakiwania między pięcioma narzędziami.</h2>
+                    <p>
+                        Reselio zostało ułożone pod realny rytm odsprzedaży: kupujesz, dopisujesz
+                        zdjęcia, pilnujesz magazynu, zapisujesz koszty sprzedaży i od razu widzisz,
+                        czy towar faktycznie zarabia.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <span class="feature-index">01</span>
+                        <h3>Zakupy z pełnym kontekstem</h3>
+                        <p>Dodawaj nazwę, cenę, ilość, źródło, kategorię, notatki i zdjęcia bez rozbijania procesu na kilka ekranów.</p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <span class="feature-index">02</span>
+                        <h3>Magazyn na poziomie sztuk</h3>
+                        <p>Widzisz, co jest do sprzedania, co już wystawione, a co wyrzucone. Przy większej partii decydujesz też, ile sztuk ma przejść dalej.</p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <span class="feature-index">03</span>
+                        <h3>Wystawienia bez zgadywania</h3>
+                        <p>Przypinaj platformy sprzedaży i od razu wiesz, gdzie dana partia jest aktywna i co nadal czeka w magazynie.</p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <span class="feature-index">04</span>
+                        <h3>Sprzedaż z kosztami</h3>
+                        <p>Zapisujesz cenę, prowizję, wysyłkę i dodatkowe opłaty. Wynik nie jest „na czuja”, tylko policzony z pełnym kosztem.</p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <span class="feature-index">05</span>
+                        <h3>Zdjęcia, notatki i archiwum</h3>
+                        <p>Każdy przedmiot ma własną galerię, zdjęcie główne i historię. Sprzedaże możesz archiwizować bez wycinania ich ze statystyk.</p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <span class="feature-index">06</span>
+                        <h3>CSV, backup i prywatność</h3>
+                        <p>Dane zostają u Ciebie, dają się eksportować i dają się odtworzyć razem ze zdjęciami i ustawieniami po przywróceniu kopii.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-workflow" id="workflow">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Jak to działa</p>
+                    <h2>Cztery ruchy, które porządkują cały obieg towaru.</h2>
+                </div>
+
+                <div class="workflow-grid">
+                    <article class="workflow-step reveal">
+                        <span class="step-number">1</span>
+                        <h3>Dodaj zakup</h3>
+                        <p>Wpisz partię, ilość, koszt, kategorię i zdjęcia, zanim rzecz zniknie w torbie albo w pamięci.</p>
+                    </article>
+
+                    <article class="workflow-step reveal">
+                        <span class="step-number">2</span>
+                        <h3>Ogarniasz magazyn</h3>
+                        <p>Filtrujesz, wyszukujesz, wystawiasz tylko część sztuk albo przywracasz rzeczy z widoku wyrzuconych.</p>
+                    </article>
+
+                    <article class="workflow-step reveal">
+                        <span class="step-number">3</span>
+                        <h3>Zapisz sprzedaż</h3>
+                        <p>Dodaj platformę, cenę sprzedaży i koszty, a Reselio od razu zaktualizuje stan i policzy realny wynik.</p>
+                    </article>
+
+                    <article class="workflow-step reveal">
+                        <span class="step-number">4</span>
+                        <h3>Sprawdź, co naprawdę działa</h3>
+                        <p>Patrzysz na zysk netto, najlepsze kategorie, eksport CSV i pełną kopię zapasową bez straty zdjęć.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-showcase" id="showcase">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Ekrany aplikacji</p>
+                    <h2>Gotowe miejsce na zrzuty, które pokażą produkt zamiast go tylko opisywać.</h2>
+                    <p>
+                        Sekcja jest przygotowana pod realne screeny z aplikacji. Każdy slot ma już
+                        opis funkcji, żeby później łatwo podmienić placeholder na właściwy obraz.
+                    </p>
+                </div>
+
+                <div class="shots-grid" id="screens-grid"></div>
+            </div>
+        </section>
+
+        <section class="section section-trust" id="trust">
+            <div class="container trust-grid">
+                <article class="trust-card reveal">
+                    <p class="eyebrow">Dane pod kontrolą</p>
+                    <h2>Lokalnie, prywatnie i z pełnym backupem.</h2>
+                    <p>
+                        Reselio zostało pomyślane jako narzędzie, które nie wymaga konta i nie
+                        uzależnia codziennej pracy od zewnętrznego systemu. Dane, zdjęcia i
+                        ustawienia możesz zachować i przywrócić jako pełny stan aplikacji.
+                    </p>
+                    <ul class="check-list">
+                        <li>działa lokalnie na urządzeniu</li>
+                        <li>obsługuje backup i restore ze zdjęciami</li>
+                        <li>umożliwia blokadę aplikacji biometrią</li>
+                    </ul>
+                </article>
+
+                <article class="trust-card trust-card-premium reveal">
+                    <p class="eyebrow">Pomoc i rozwój produktu</p>
+                    <h2>Jest miejsce na wsparcie, subskrypcję i Reselio Premium.</h2>
+                    <p>
+                        W aplikacji są już przygotowane sekcje pomocy, ekran subskrypcji oraz
+                        strefa premium. Dzięki temu landing może komunikować nie tylko obecne
+                        funkcje, ale też kierunek rozwoju bez rozjeżdżania produktu na kilka stron.
+                    </p>
+                    <div class="trust-pills">
+                        <span>FAQ / Pomoc</span>
+                        <span>Polityka prywatności</span>
+                        <span>Regulamin</span>
+                        <span>Reselio Premium</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-faq" id="faq">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Najważniejsze pytania przed pobraniem.</h2>
+                </div>
+
+                <div class="faq-list" id="faq-list"></div>
+            </div>
+        </section>
+
+        <section class="section section-download" id="download">
+            <div class="container">
+                <div class="download-panel reveal">
+                    <div class="download-copy">
+                        <p class="eyebrow">Pobranie</p>
+                        <h2>Jeśli kupujesz z myślą o odsprzedaży, Reselio powinno być pierwszą aplikacją, którą otwierasz rano.</h2>
+                        <p>
+                            Zamiast pamiętać, co kupiłeś, co już wystawiłeś i gdzie uciekły koszty,
+                            masz jeden ekran startowy do kontroli całego obrotu.
+                        </p>
+                    </div>
+
+                    <div class="download-actions">
+                        <a class="button button-light js-primary-cta" href="#top">Pobierz z App Store</a>
+                        <a class="button button-outline" href="#showcase">Zobacz ekrany</a>
+                        <p class="download-meta js-cta-meta"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div>
+                <strong>Reselio</strong>
+                <p>One-page landing dla aplikacji do ogarniania zakupów pod odsprzedaż.</p>
+            </div>
+            <p>© <span id="year"></span> Reselio</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
