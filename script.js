@@ -1,7 +1,7 @@
 const siteConfig = {
     appName: "Reselio",
     appStoreUrl: "",
-    contactEmail: "kajet@kajet.pl",
+    contactEmail: "reselio@reselio.app",
     heroShot: {
         label: "Hero screen",
         title: "Wklej główny screen aplikacji",

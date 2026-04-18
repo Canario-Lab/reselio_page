@@ -9,6 +9,7 @@
         content="Reselio to lokalna aplikacja iOS dla resellerów. Ogarnia zakupy, magazyn, wystawienia, sprzedaż, koszty, zdjęcia, backupy i realny wynik."
     >
     <meta name="theme-color" content="#081F5C">
+    <link rel="icon" type="image/png" href="assets/reselio-app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,9 +26,7 @@
         <div class="container nav-shell">
             <a class="brand" href="#top" aria-label="Reselio">
                 <span class="brand-mark" aria-hidden="true">
-                    <span class="brand-mark-grid"></span>
-                    <span class="brand-mark-tag"></span>
-                    <span class="brand-mark-arrow"></span>
+                    <img class="brand-icon" src="assets/reselio-app-icon.png" alt="">
                 </span>
                 <span class="brand-copy">
                     <strong>Reselio</strong>
@@ -227,8 +226,8 @@
                     </p>
                     <div class="trust-pills">
                         <span>FAQ / Pomoc</span>
-                        <span>Polityka prywatności</span>
-                        <span>Regulamin</span>
+                        <a href="privacy.html">Polityka prywatności</a>
+                        <a href="terms.html">Warunki korzystania</a>
                         <span>Reselio Premium</span>
                     </div>
                 </article>
@@ -270,11 +269,17 @@
 
     <footer class="site-footer">
         <div class="container footer-shell">
-            <div>
+            <div class="footer-copy">
                 <strong>Reselio</strong>
                 <p>One-page landing dla aplikacji do ogarniania zakupów pod odsprzedaż.</p>
             </div>
-            <p>© <span id="year"></span> Reselio</p>
+            <div class="footer-meta">
+                <nav class="footer-legal" aria-label="Linki prawne">
+                    <a href="privacy.html">Polityka prywatności</a>
+                    <a href="terms.html">Warunki korzystania</a>
+                </nav>
+                <p>© <span id="year"></span> Reselio</p>
+            </div>
         </div>
     </footer>
 
