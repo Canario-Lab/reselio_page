@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulamin — Reselio</title>
+<meta name="description" content="Warunki korzystania z aplikacji Reselio.">
+<meta name="theme-color" content="#0d1b4b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b4b;
+    --accent: #4f8fff;
+    --mint: #00e5b0;
+    --white: #ffffff;
+    --text: rgba(255,255,255,0.88);
+    --muted: rgba(255,255,255,0.62);
+    --line: rgba(255,255,255,0.09);
+    --card: rgba(255,255,255,0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 20%, rgba(79,143,255,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 10% 70%, rgba(0,229,176,0.10) 0%, transparent 50%),
+      var(--navy);
+    color: var(--text);
+  }
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .shell {
+    width: min(980px, calc(100vw - 32px));
+    margin: 0 auto;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span,
+  .eyebrow {
+    color: var(--mint);
+  }
+
+  .back-link {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .back-link:hover {
+    color: var(--white);
+  }
+
+  .card {
+    margin: 18px 0 48px;
+    padding: 40px;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: var(--card);
+    backdrop-filter: blur(18px);
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  .meta {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .sections {
+    display: grid;
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  section {
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  h2 {
+    margin: 0 0 14px;
+    color: var(--white);
+    font-size: 1.3rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  p, li {
+    margin: 0;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  p + p,
+  p + ul,
+  p + ol,
+  ul + p,
+  ol + p {
+    margin-top: 12px;
+  }
+
+  ul, ol {
+    margin: 0;
+    padding-left: 22px;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+
+  code {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: var(--white);
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 0 40px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    color: var(--muted);
+  }
+
+  .footer-links a:hover,
+  .footer-links a[aria-current="page"] {
+    color: var(--white);
+  }
+
+  @media (max-width: 720px) {
+    .topbar,
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .card {
+      padding: 24px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <a class="logo" href="index.html">Rese<span>lio</span></a>
+      <a class="back-link" href="index.html">Wróć na stronę główną</a>
+    </div>
+
+    <main class="card">
+      <p class="eyebrow">Dokument prawny</p>
+      <h1>Warunki korzystania z aplikacji „Reselio”</h1>
+      <p class="meta">Data wejścia w życie: 17.04.2026 · Wersja: 1.0</p>
+
+      <div class="sections">
+        <section>
+          <h2>1. Informacje o Usługodawcy</h2>
+          <ol>
+            <li>
+              Usługodawcą udostępniającym aplikację „Reselio” („Aplikacja”) jest:<br>
+              Canario-Lab / Reselio App<br>
+              E-mail: <a href="mailto:reselio@reselio.app">reselio@reselio.app</a><br>
+              („Usługodawca”).
+            </li>
+            <li>Warunki określają zasady korzystania z Aplikacji, w tym zasady dostępu do funkcji bezpłatnych i płatnych.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>2. Definicje</h2>
+          <p>Na potrzeby Warunków:</p>
+          <ol>
+            <li>Użytkownik — osoba korzystająca z Aplikacji na urządzeniu Apple.</li>
+            <li>Przedmiot — rekord lub partia danych dodana w Aplikacji dotycząca zakupu pod odsprzedaż, w tym np. nazwa, cena zakupu, ilość, zdjęcia, notatki, wystawienia i powiązane koszty.</li>
+            <li>Sprzedaż — rekord w Aplikacji potwierdzający sprzedaż całości lub części Przedmiotu albo jego jednostek.</li>
+            <li>Premium — płatny dostęp do dodatkowych lub pełnych funkcji Aplikacji w ramach subskrypcji, jeśli jest oferowany w danej wersji Aplikacji.</li>
+            <li>Trial — bezpłatny okres próbny Premium, jeżeli jest dostępny dla Użytkownika w App Store.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>3. Wymagania techniczne</h2>
+          <ol>
+            <li>Do korzystania z Aplikacji wymagane jest kompatybilne urządzenie Apple oraz system iOS w wersji wspieranej przez Aplikację.</li>
+            <li>Niektóre funkcje, w szczególności zakupy w aplikacji, przywracanie zakupów, eksport plików lub import kopii zapasowych, mogą wymagać połączenia z Internetem, konta Apple ID albo dostępu do systemowych mechanizmów plików.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>4. Charakter Aplikacji</h2>
+          <ol>
+            <li>Aplikacja służy do prowadzenia lokalnej ewidencji zakupów pod odsprzedaż, stanów magazynowych, wystawień, sprzedaży, kosztów dodatkowych i wyniku.</li>
+            <li>Aplikacja nie jest platformą marketplace, nie pośredniczy w zawieraniu transakcji z kupującymi, nie przetwarza płatności między sprzedającym a kupującym i nie świadczy usług księgowych, podatkowych ani prawnych.</li>
+            <li>Usługodawca nie gwarantuje osiągnięcia określonych wyników sprzedażowych, marży, zysku ani szybkości sprzedaży.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>5. Dane i prywatność</h2>
+          <ol>
+            <li>Aplikacja nie wymaga zakładania konta.</li>
+            <li>Dane wprowadzane w Aplikacji są co do zasady przechowywane lokalnie na urządzeniu Użytkownika.</li>
+            <li>Szczegółowe zasady przetwarzania danych opisuje <a href="privacy.html">Polityka prywatności</a>.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>6. Funkcje bezpłatne i Premium</h2>
+          <ol>
+            <li>Aplikacja może oferować dostęp do funkcji bezpłatnych oraz do funkcji Premium.</li>
+            <li>Zakres funkcji bezpłatnych i płatnych może zależeć od aktualnej wersji Aplikacji oraz konfiguracji oferty w App Store.</li>
+            <li>Aktualne ceny, okresy rozliczeniowe i dostępne warianty Reselio Premium są prezentowane na ekranie zakupu w Aplikacji oraz wynikają z konfiguracji App Store.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>7. Premium, subskrypcje i płatności</h2>
+          <ol>
+            <li>Jeżeli Reselio Premium jest oferowany, może być dostępny w formie subskrypcji odnawialnej automatycznie jako zakup w aplikacji (In-App Purchase) realizowany przez Apple (App Store).</li>
+            <li>Płatność jest pobierana z konta Apple ID po potwierdzeniu zakupu przez Użytkownika.</li>
+            <li>Subskrypcja odnawia się automatycznie, chyba że Użytkownik wyłączy automatyczne odnawianie w ustawieniach konta Apple ID z odpowiednim wyprzedzeniem przed końcem bieżącego okresu rozliczeniowego.</li>
+            <li>Usługodawca nie przetwarza danych płatniczych Użytkownika (np. danych karty). Obsługa płatności odbywa się przez Apple.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>8. Trial (okres próbny)</h2>
+          <ol>
+            <li>Aplikacja może oferować Trial Reselio Premium, o ile Trial jest dostępny dla Użytkownika w App Store.</li>
+            <li>Trial może nie być dostępny dla wszystkich Użytkowników, np. ze względu na zasady Apple lub wcześniejsze skorzystanie z okresu próbnego.</li>
+            <li>Jeżeli Użytkownik nie chce kontynuować subskrypcji po Trial, powinien anulować subskrypcję w ustawieniach konta Apple ID zgodnie z zasadami Apple.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>9. Przywracanie zakupów</h2>
+          <ol>
+            <li>Użytkownik może przywrócić zakupione subskrypcje na urządzeniu Apple zgodnie z mechanizmami Apple oraz funkcją „Przywróć zakupy” dostępną w Aplikacji, jeśli jest dostępna w danej wersji.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>10. Wsparcie i zgłaszanie problemów</h2>
+          <ol>
+            <li>Użytkownik może zgłaszać problemy techniczne na adres e-mail: <a href="mailto:reselio@reselio.app">reselio@reselio.app</a>.</li>
+            <li>W korespondencji z Usługodawcą Użytkownik może dobrowolnie przekazać informacje potrzebne do obsługi zgłoszenia, np. opis problemu, wersję aplikacji lub model urządzenia.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>11. Odpowiedzialność</h2>
+          <ol>
+            <li>Usługodawca dokłada starań, aby Aplikacja działała poprawnie, jednak Aplikacja jest udostępniana „tak jak jest” i może zawierać błędy albo czasowe przerwy w działaniu.</li>
+            <li>
+              Usługodawca nie ponosi odpowiedzialności za:
+              <ul>
+                <li>decyzje zakupowe, sprzedażowe, cenowe, księgowe, podatkowe lub biznesowe Użytkownika,</li>
+                <li>skutki działań podjętych na podstawie danych wprowadzonych do Aplikacji,</li>
+                <li>brak sprzedaży, brak zysku lub nieosiągnięcie oczekiwanych wyników handlowych.</li>
+              </ul>
+            </li>
+            <li>Odpowiedzialność Usługodawcy jest ograniczona w zakresie dopuszczalnym przez obowiązujące przepisy prawa.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>12. Zmiany Warunków</h2>
+          <ol>
+            <li>Warunki mogą zostać zmienione w przypadku zmian funkcjonalności Aplikacji, zmian prawnych lub organizacyjnych.</li>
+            <li>Aktualna wersja Warunków będzie publikowana w Aplikacji albo na stronie aplikacji <code>reselio.app</code>.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>13. Postanowienia końcowe</h2>
+          <ol>
+            <li>W sprawach nieuregulowanych Warunkami zastosowanie mają właściwe przepisy prawa.</li>
+            <li>Jeżeli którekolwiek postanowienie Warunków okaże się nieważne, pozostałe postanowienia pozostają w mocy.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>© 2026 Reselio</div>
+      <div class="footer-links">
+        <a href="privacy.html">Polityka prywatności</a>
+        <a href="terms.html" aria-current="page">Regulamin</a>
+        <a href="mailto:reselio@reselio.app">Kontakt</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
