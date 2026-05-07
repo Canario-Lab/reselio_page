@@ -239,7 +239,11 @@
             rekordy sprzedaży, koszty, zdjęcia, kopie zapasowe oraz ustawienia
             aplikacji, są przechowywane lokalnie na Twoim urządzeniu.
           </p>
-          <p>Te dane nie są automatycznie wysyłane do nas ani na nasze serwery.</p>
+          <p>
+            Te dane nie są automatycznie wysyłane do nas ani na nasze serwery.
+            Aplikacja może jednak zbierać anonimowe zdarzenia analityczne
+            dotyczące korzystania z funkcji, opisane w sekcji 7.
+          </p>
         </section>
 
         <section>
@@ -264,20 +268,35 @@
         </section>
 
         <section>
-          <h2>6) Zakupy w aplikacji i subskrypcje (Apple / StoreKit)</h2>
+          <h2>6) Zakupy w aplikacji i subskrypcje (Apple + RevenueCat)</h2>
           <p>Jeśli w aplikacji zostaną udostępnione funkcje płatne, w tym Reselio Premium:</p>
           <ul>
-            <li>płatności będą obsługiwane przez Apple (App Store / In-App Purchases / StoreKit),</li>
-            <li>aplikacja może weryfikować status zakupu lub subskrypcji, aby odblokować odpowiednie funkcje premium,</li>
-            <li>w tym zakresie mogą być przetwarzane techniczne dane związane z zakupem, takie jak identyfikatory transakcji, identyfikatory produktów, status subskrypcji i techniczne identyfikatory potrzebne do przywracania zakupów lub potwierdzenia dostępu.</li>
+            <li>płatności są obsługiwane przez Apple (App Store / In-App Purchases / StoreKit),</li>
+            <li>aplikacja korzysta z RevenueCat jako warstwy do obsługi oferty, weryfikacji statusu subskrypcji oraz przywracania dostępu premium,</li>
+            <li>w tym zakresie mogą być przetwarzane techniczne dane związane z zakupem, takie jak identyfikatory transakcji, identyfikatory produktów, status subskrypcji oraz techniczne identyfikatory potrzebne do przywracania zakupów lub potwierdzenia dostępu.</li>
           </ul>
         </section>
 
         <section>
           <h2>7) Analityka i śledzenie</h2>
           <p>
-            Aplikacja nie używa narzędzi analitycznych ani reklamowych SDK do
-            śledzenia użytkowników i nie sprzedaje danych.
+            Aplikacja może korzystać z Firebase Analytics do zbierania
+            anonimowych danych o sposobie korzystania z aplikacji, np. dodanie
+            przedmiotu do magazynu, oznaczenie przedmiotu jako sprzedanego,
+            wystawienie przedmiotu, dodanie wydatku albo otwarcie podsumowania.
+          </p>
+          <p>
+            Te dane nie zawierają nazw przedmiotów, opisów, notatek, zdjęć,
+            kwot, cen, kosztów, platform sprzedaży, danych z eksportów, danych
+            płatniczych ani informacji pozwalających Cię bezpośrednio
+            zidentyfikować. Dane analityczne nie są przez nas łączone z kontem
+            użytkownika, ponieważ aplikacja nie wymaga konta. Używamy ich
+            wyłącznie do analizy działania aplikacji, poprawy stabilności i
+            ulepszania funkcji.
+          </p>
+          <p>
+            Nie używamy danych analitycznych do sprzedaży danych ani reklamowego
+            profilowania użytkowników.
           </p>
         </section>
 
@@ -296,7 +315,8 @@
           <h2>9) Odbiorcy danych</h2>
           <p>Dane mogą być ujawniane wyłącznie:</p>
           <ul>
-            <li>dostawcom płatności i zakupów w aplikacji, jeśli takie funkcje zostaną uruchomione (np. Apple),</li>
+            <li>dostawcom płatności i subskrypcji w aplikacji, jeśli takie funkcje zostaną uruchomione (np. Apple i RevenueCat),</li>
+            <li>dostawcom usług analitycznych: Google Firebase Analytics (anonimowa analityka zdarzeń aplikacji),</li>
             <li>dostawcom usług pocztowych, jeśli kontaktujesz się z nami mailowo,</li>
             <li>organom publicznym, jeśli wymagają tego przepisy prawa.</li>
           </ul>
