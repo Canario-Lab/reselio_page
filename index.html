@@ -413,6 +413,18 @@
     grid-column: span 2;
   }
 
+  .feat-card.photo {
+    min-height: 242px;
+    padding: 0;
+  }
+
+  .feat-card.photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
   .feat-icon {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -1118,7 +1130,7 @@
   <div class="features-grid">
     <div class="feat-card wide reveal">
       <span class="feat-icon">📦</span>
-      <div class="feat-title">Magazyn który mówi co jest grane</div>
+      <div class="feat-title">Magazyn, który mówi co jest grane</div>
       <div class="feat-desc">
         Wiesz ile masz sztuk, co jest wystawione a co czeka. Filtruj, szukaj,
         zarządzaj partiami. Wszystko masz pod ręką, bez przekopywania notatek
@@ -1153,9 +1165,13 @@
       </div>
     </div>
 
+    <div class="feat-card photo reveal">
+      <img src="assets/feature-garden.png" alt="Sprzedaż z telefonu poza domem">
+    </div>
+
     <div class="feat-card wide reveal">
       <span class="feat-icon">📊</span>
-      <div class="feat-title">Wykresy i statystyki które coś znaczą</div>
+      <div class="feat-title">Wykresy i statystyki, które coś znaczą</div>
       <div class="feat-desc">
         Podsumowanie na dziś, tydzień, miesiąc. Które kategorie zarabiają
         najlepiej? Które zakupy zalegają za długo? Reselio to pokazuje.
