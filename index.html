@@ -1115,7 +1115,7 @@
     <div class="phone-wrap">
       <div class="phone-frame">
         <div class="phone-screen">
-          <img src="assets/app-screen.png" alt="Ekran aplikacji Reselio" data-i18n="alt.heroScreen" data-i18n-attr="alt">
+          <img src="assets/app-screen.png" alt="Ekran aplikacji Reselio" data-i18n="alt.heroScreen" data-i18n-attr="alt" data-localized-image="heroScreen">
         </div>
       </div>
     </div>
@@ -1422,14 +1422,14 @@
       <div class="result-phone result-phone-main">
         <div class="phone-frame">
           <div class="phone-screen">
-            <img src="assets/summary-chart.png" alt="Ekran podsumowania z wykresem zysku" data-i18n="alt.summaryChart" data-i18n-attr="alt">
+            <img src="assets/summary-chart.png" alt="Ekran podsumowania z wykresem zysku" data-i18n="alt.summaryChart" data-i18n-attr="alt" data-localized-image="summaryChart">
           </div>
         </div>
       </div>
       <div class="result-phone result-phone-side">
         <div class="phone-frame">
           <div class="phone-screen">
-            <img src="assets/summary-details.png" alt="Ekran podsumowania kosztów" data-i18n="alt.summaryDetails" data-i18n-attr="alt">
+            <img src="assets/summary-details.png" alt="Ekran podsumowania kosztów" data-i18n="alt.summaryDetails" data-i18n-attr="alt" data-localized-image="summaryDetails">
           </div>
         </div>
       </div>
@@ -1587,6 +1587,20 @@
     title: document.title,
     description: metaDescription ? metaDescription.getAttribute('content') : ''
   };
+  const localizedImages = {
+    heroScreen: {
+      pl: 'assets/app-screen.png',
+      en: 'assets/app-screen-en.png'
+    },
+    summaryChart: {
+      pl: 'assets/summary-chart.png',
+      en: 'assets/summary-chart-en.png'
+    },
+    summaryDetails: {
+      pl: 'assets/summary-details.png',
+      en: 'assets/summary-details-en.png'
+    }
+  };
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const attr = el.dataset.i18nAttr;
@@ -1626,6 +1640,14 @@
     return languages[0].toLowerCase().startsWith('pl') ? 'pl' : 'en';
   }
 
+  function updateLocalizedImages(lang) {
+    document.querySelectorAll('[data-localized-image]').forEach((img) => {
+      const sources = localizedImages[img.dataset.localizedImage];
+      const src = sources && (sources[lang] || sources.pl);
+      if (src) img.setAttribute('src', src);
+    });
+  }
+
   function applyLanguage(lang, persist = false) {
     const dictionary = translations[lang] || {};
 
@@ -1649,6 +1671,7 @@
     if (metaDescription) {
       metaDescription.setAttribute('content', lang === 'pl' ? originalMeta.description : dictionary.metaDescription);
     }
+    updateLocalizedImages(lang);
 
     const switcher = document.querySelector('.language-switch');
     if (switcher) {
