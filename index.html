@@ -905,7 +905,7 @@
     .nav-actions { gap: 8px; }
     .nav-cta { padding: 10px 16px; font-size: 0.82rem; }
     .lang-btn { padding: 6px 8px; }
-    .hero { grid-template-columns: 1fr; padding-top: 100px; }
+    .hero { grid-template-columns: minmax(0, 1fr); padding-top: 100px; }
     .hero-left { padding: 40px 24px; }
     .hero-right { height: 60vh; }
     .float-card { display: none; }
@@ -928,6 +928,25 @@
     .result-bubble-detail { right: -34px; top: 460px; }
     footer { flex-direction: column; gap: 24px; text-align: center; padding: 40px 24px; }
     .cta-final { padding: 80px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 16px 12px; }
+    nav .logo { font-size: 1.25rem; }
+    .nav-actions { gap: 6px; }
+    .nav-cta {
+      padding: 9px 11px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+    .language-switch { padding: 2px; }
+    .lang-btn { padding: 5px 6px; font-size: 0.68rem; }
+    h1 { font-size: 2.15rem; }
+    .hero-badge { font-size: 0.72rem; padding: 7px 12px; }
+  }
+
+  @media (max-width: 380px) {
+    .nav-cta { display: none; }
   }
 
   /* ── FOR WHOM ── */
@@ -1044,6 +1063,8 @@
     <div class="language-switch" aria-label="Wybór języka">
       <button type="button" class="lang-btn active" data-lang-choice="pl" aria-pressed="true">PL</button>
       <button type="button" class="lang-btn" data-lang-choice="en" aria-pressed="false">EN</button>
+      <button type="button" class="lang-btn" data-lang-choice="es" aria-pressed="false">ES</button>
+      <button type="button" class="lang-btn" data-lang-choice="de" aria-pressed="false">DE</button>
     </div>
     <a href="https://apps.apple.com/us/app/reselio-dziennik-sprzeda%C5%BCy/id6762528478" class="nav-cta" data-i18n="nav.download">Pobierz za darmo</a>
   </div>
@@ -1456,8 +1477,8 @@
 <footer>
   <div class="logo">Rese<span>lio</span></div>
   <ul class="footer-links">
-    <li><a href="privacy.html" data-i18n="footer.privacy">Polityka prywatności</a></li>
-    <li><a href="terms.html" data-i18n="footer.terms">Regulamin</a></li>
+    <li><a href="privacy.html" data-i18n="footer.privacy" data-localized-link="privacy">Polityka prywatności</a></li>
+    <li><a href="terms.html" data-i18n="footer.terms" data-localized-link="terms">Regulamin</a></li>
     <li><a href="mailto:reselio@reselio.app" data-i18n="footer.contact">Kontakt</a></li>
   </ul>
   <div>© 2026 Reselio</div>
@@ -1578,6 +1599,234 @@
       "alt.vintage": "Customer browsing clothes in a thrift store",
       "alt.summaryChart": "Summary screen with a profit chart",
       "alt.summaryDetails": "Summary screen with costs"
+    },
+    es: {
+      metaTitle: "Reselio – controla tu negocio de reventa",
+      metaDescription: "Reselio te ayuda a gestionar tus compras y ventas, el inventario, los costes y el beneficio real desde tu iPhone.",
+      "nav.download": "Descárgala gratis",
+      "hero.badge": "Solo para iOS • Datos locales",
+      "hero.title": "Compra a menudo,<br>vende rápido.<br><em>Tenlo todo bajo control.</em>",
+      "hero.sub": "Reselio convierte hojas de cálculo caóticas y notas dispersas en una visión clara de tu negocio. Sin Excel. Sin ordenador.",
+      "hero.primaryCta": "Descargar para iPhone",
+      "hero.secondaryCta": "Descubre cómo funciona →",
+      "stats.local": "datos en tu dispositivo",
+      "stats.freeAmount": "0<span> PLN</span>",
+      "stats.start": "para empezar",
+      "stats.appStore": "App Store",
+      "floating.netProfit": "Beneficio neto",
+      "floating.phone": "Teléfono móvil · OLX",
+      "floating.item": "Zapatillas deportivas",
+      "floating.status": "Publicado en Vinted",
+      "problem.question": "<strong>¿Cuánto has ganado de verdad este mes?</strong><br>Es decir, después de restar envíos, comisiones y esas compras que no pudiste vender.",
+      "problem.answer": "Muchos vendedores no lo saben con certeza. Se fijan en los ingresos, olvidan los costes y pierden el hilo entre OLX, Vinted y Allegro.<br><br><strong>Reselio cambia eso.</strong> Un solo lugar para ver el resultado completo.",
+      "features.label": "Todo lo que necesitas",
+      "features.title": "Lo que necesitas.<br>Y nada que estorbe.",
+      "features.sub": "Lleva tus resultados siempre contigo, no atrapados en una hoja de cálculo del ordenador.",
+      "features.inventory.title": "Un inventario que te dice qué está pasando",
+      "features.inventory.desc": "Sabes cuántos artículos tienes, cuáles están publicados y cuáles siguen esperando. Filtra, busca y gestiona lotes sin rebuscar entre notas y mensajes.",
+      "features.profit.title": "Beneficio real, no solo facturación",
+      "features.profit.desc": "El beneficio neto incluye el precio de compra, el envío, las comisiones de las plataformas y cualquier gasto extra. Así sabes si realmente ganas o pierdes dinero.",
+      "features.photos.title": "Fotos para cada artículo",
+      "features.photos.desc": "Una galería para cada cosa que vendes. Añade fotos desde la cámara, la galería o la opción Compartir de otra app.",
+      "features.import.title": "Importación desde 15 plataformas",
+      "features.import.desc": "Comparte o pega el enlace de un anuncio. Reselio completa los datos, las fotos y el enlace para que no tengas que escribirlo todo a mano.",
+      "features.stats.title": "Gráficos y estadísticas que sí sirven",
+      "features.stats.desc": "Consulta el resumen del día, la semana o el mes. Descubre qué categorías rinden mejor y qué compras llevan demasiado tiempo paradas. También puedes exportarlo todo a CSV.",
+      "features.backup.title": "Copia de seguridad",
+      "features.backup.desc": "Copias de seguridad con recordatorios. Tus datos, bajo tu control.",
+      "flow.label": "Cómo funciona",
+      "flow.title": "De la compra<br>al beneficio.",
+      "flow.sub": "Un proceso sencillo que encaja con la forma en que realmente funciona la reventa.",
+      "flow.step1.title": "Registra o importa una compra",
+      "flow.step1.desc": "Añádela a mano o importa los datos de un anuncio. El nombre, el precio, las fotos y el enlace llegan a Reselio en un momento.",
+      "flow.step2.title": "Publica y haz el seguimiento",
+      "flow.step2.desc": "Marca qué has publicado y en qué plataforma. El enlace del anuncio queda siempre junto al artículo.",
+      "flow.step3.title": "Registra la venta",
+      "flow.step3.desc": "Añade el precio, la plataforma y los gastos extra. El inventario se actualiza automáticamente.",
+      "flow.step4.title": "Comprueba el resultado",
+      "flow.step4.desc": "Ve cuánto has ganado de verdad, qué artículos merecen la pena y dónde se escapa tu margen.",
+      "mockup.phone": "Teléfono móvil",
+      "mockup.phoneMeta": "Electrónica · compra 450 PLN",
+      "mockup.sold": "Vendido",
+      "mockup.salePrice": "Precio de venta",
+      "mockup.shippingFee": "Envío + comisión",
+      "mockup.netProfit": "Beneficio neto",
+      "mockup.shoes": "Zapatillas deportivas",
+      "mockup.shoesMeta": "Ropa · compra 66 PLN",
+      "mockup.listed": "Publicado",
+      "mockup.game": "Juego de mesa",
+      "mockup.gameMeta": "Ocio · compra 35 PLN",
+      "mockup.toSell": "Por vender",
+      "mockup.tiedCash": "Dinero inmovilizado",
+      "pricing.label": "Precios",
+      "pricing.title": "Empieza gratis.<br>Pasa a Premium cuando lo necesites.",
+      "pricing.sub": "El plan gratuito te permite descubrir cómo funciona. Premium desbloquea todo el proceso sin límites.",
+      "pricing.free.label": "Gratis",
+      "pricing.free.amount": "0 PLN",
+      "pricing.free.desc": "Para siempre. Sin tarjeta de crédito.",
+      "pricing.free.feature1": "Inventario y registro de compras",
+      "pricing.free.feature2": "Importación desde 15 plataformas",
+      "pricing.free.feature3": "Historial de ventas limitado",
+      "pricing.free.feature4": "Todos los gráficos e informes",
+      "pricing.free.feature5": "Exportación a CSV",
+      "pricing.free.feature6": "Copia de seguridad",
+      "pricing.free.cta": "Descárgala gratis",
+      "pricing.premium.label": "Premium",
+      "pricing.premium.amount": "Plan mensual",
+      "pricing.premium.desc": "Consulta el precio en App Store. Prueba disponible.",
+      "pricing.premium.feature1": "Todo lo incluido en el plan gratuito",
+      "pricing.premium.feature2": "Ventas ilimitadas",
+      "pricing.premium.feature3": "Todos los gráficos y estadísticas",
+      "pricing.premium.feature4": "Exportación a CSV",
+      "pricing.premium.feature5": "Copia de seguridad y restauración",
+      "pricing.premium.feature6": "Soporte prioritario",
+      "pricing.premium.cta": "Empezar la prueba →",
+      "forwhom.label": "Para quién es",
+      "forwhom.title": "¿Es para ti?",
+      "forwhom.sub": "Reselio es para cualquiera que compre y venda,<br>sin importar qué venda ni dónde.",
+      "persona.electronics.tag": "📦 Electrónica y dispositivos",
+      "persona.electronics.quote": "\"Cuando tienes una docena de cosas en las estanterías, es fácil perder el control. Reselio me muestra qué está publicado, qué sigue esperando y qué ventas me han dado beneficio de verdad.\"",
+      "persona.electronics.desc": "Registras la compra, publicas el anuncio en OLX y anotas la venta. Reselio hace el resto, incluidas las comisiones y el envío.",
+      "persona.markets.tag": "🏪 Mercadillos y bazares",
+      "persona.markets.quote": "\"Compro en mercadillos y vendo en Vinted. Nunca tenía claro si de verdad estaba ganando algo.\"",
+      "persona.markets.desc": "Foto hecha, precio guardado y venta marcada. Todo calculado, sin hojas de cálculo ni ordenador.",
+      "persona.vintage.tag": "👗 Ropa y vintage",
+      "persona.vintage.quote": "\"Compro ropa de segunda mano y la revendo a menudo. Me encanta, pero apuntar a mano qué había comprado, dónde y por cuánto se convirtió enseguida en una pesadilla.\"",
+      "persona.vintage.desc": "Lotes, cantidades y estados: publicado, vendido o descartado. Reselio controla todo el ciclo de vida de cada artículo.",
+      "results.label": "Resultados",
+      "results.title": "Ve el resultado.<br>Deja de adivinar.",
+      "results.sub": "Reselio te muestra lo importante sin tener que hacer cuentas en una libreta.",
+      "results.quick": "Un vistazo basta para saber cómo va todo",
+      "results.detail": "Todos los detalles, cuando los necesites",
+      "cta.label": "Empieza ahora",
+      "cta.title": "Tu negocio de reventa merece orden.",
+      "cta.sub": "Descárgala gratis. Sin cuenta, sin nube y sin caos.",
+      "cta.appStoreTop": "Disponible en",
+      "cta.appStoreMain": "App Store",
+      "footer.privacy": "Política de privacidad",
+      "footer.terms": "Términos y condiciones",
+      "footer.contact": "Contacto",
+      "alt.heroScreen": "Pantalla de la aplicación Reselio",
+      "alt.garden": "Gestión de ventas desde el móvil fuera de casa",
+      "alt.electronics": "Persona dedicada a la reventa de electrónica",
+      "alt.markets": "Venta de artículos en un mercadillo",
+      "alt.vintage": "Clienta mirando ropa en una tienda de segunda mano",
+      "alt.summaryChart": "Pantalla de resumen con un gráfico de beneficios",
+      "alt.summaryDetails": "Pantalla de resumen con el desglose de costes"
+    },
+    de: {
+      metaTitle: "Reselio – Reselling einfach im Griff",
+      metaDescription: "Reselio hilft dir, Einkäufe, Bestand, Kosten und den tatsächlichen Gewinn beim Weiterverkauf direkt auf deinem iPhone zu verwalten.",
+      "nav.download": "Kostenlos laden",
+      "hero.badge": "Nur für iOS • Deine Daten bleiben bei dir",
+      "hero.title": "Oft gekauft,<br>schnell verkauft.<br><em>Alles im Griff.</em>",
+      "hero.sub": "Reselio macht aus chaotischen Tabellen und verstreuten Notizen einen klaren Überblick über dein Reselling. Ohne Excel. Ohne Computer.",
+      "hero.primaryCta": "Für iPhone laden",
+      "hero.secondaryCta": "So funktioniert Reselio →",
+      "stats.local": "lokale Daten",
+      "stats.freeAmount": "0<span> PLN</span>",
+      "stats.start": "zum Start",
+      "stats.appStore": "App Store",
+      "floating.netProfit": "Nettogewinn",
+      "floating.phone": "Smartphone · OLX",
+      "floating.item": "Laufschuhe",
+      "floating.status": "Auf Vinted inseriert",
+      "problem.question": "<strong>Wie viel hast du diesen Monat wirklich verdient?</strong><br>Also nach Versand, Gebühren und den Artikeln, die du aussortieren musstest?",
+      "problem.answer": "Viele Verkäufer wissen es nicht genau. Sie sehen nur den Umsatz, vergessen Kosten und verlieren zwischen OLX, Vinted und Allegro den Überblick.<br><br><strong>Reselio ändert das.</strong> Ein Ort für das vollständige Ergebnis.",
+      "features.label": "Das bekommst du",
+      "features.title": "Alles, was du brauchst.<br>Nichts, was dich aufhält.",
+      "features.sub": "Dein Ergebnis ist immer dabei und nicht in einer Tabelle auf dem Laptop versteckt.",
+      "features.inventory.title": "Ein Bestand, der dir den Überblick gibt",
+      "features.inventory.desc": "Du siehst sofort, wie viele Artikel du hast, was bereits inseriert ist und was noch wartet. Filtern, suchen und Partien verwalten – ohne Notizen und Nachrichten zu durchforsten.",
+      "features.profit.title": "Echter Gewinn statt bloß Umsatz",
+      "features.profit.desc": "Der Nettogewinn berücksichtigt Einkaufspreis, Versand, Plattformgebühren und zusätzliche Kosten. So erkennst du, ob sich ein Verkauf wirklich lohnt.",
+      "features.photos.title": "Fotos zu jedem Artikel",
+      "features.photos.desc": "Eine eigene Galerie für alles, was du verkaufst. Füge Bilder direkt aus Kamera oder Fotomediathek hinzu oder teile sie aus einer anderen App.",
+      "features.import.title": "Import von 15 Plattformen",
+      "features.import.desc": "Teile oder kopiere den Link zu einem Angebot. Reselio übernimmt Daten, Fotos und Link, damit du nicht alles von Hand eingeben musst.",
+      "features.stats.title": "Auswertungen, die wirklich weiterhelfen",
+      "features.stats.desc": "Sieh dir Tag, Woche oder Monat an. Welche Kategorien bringen den meisten Gewinn? Welche Einkäufe liegen zu lange? Reselio zeigt es dir. Bei Bedarf exportierst du alles als CSV.",
+      "features.backup.title": "Backup",
+      "features.backup.desc": "Backups mit Erinnerungen. Deine Daten, deine Kontrolle.",
+      "flow.label": "So funktioniert es",
+      "flow.title": "Vom Einkauf<br>zum Gewinn.",
+      "flow.sub": "Ein einfacher Ablauf, der zu echtem Reselling passt.",
+      "flow.step1.title": "Einkauf erfassen oder importieren",
+      "flow.step1.desc": "Trage ihn von Hand ein oder importiere die Daten aus einem Angebot. Name, Preis, Fotos und Link landen in wenigen Schritten in Reselio.",
+      "flow.step2.title": "Inserieren und im Blick behalten",
+      "flow.step2.desc": "Markiere, was du auf welcher Plattform inseriert hast. Der Link zum Inserat bleibt direkt beim Artikel.",
+      "flow.step3.title": "Verkauf erfassen",
+      "flow.step3.desc": "Preis, Plattform und zusätzliche Kosten eintragen – der Bestand aktualisiert sich automatisch.",
+      "flow.step4.title": "Ergebnis sehen",
+      "flow.step4.desc": "Wie viel du wirklich verdient hast, welche Artikel sich lohnen und wo deine Marge verloren geht.",
+      "mockup.phone": "Smartphone",
+      "mockup.phoneMeta": "Elektronik · Einkauf 450 PLN",
+      "mockup.sold": "Verkauft",
+      "mockup.salePrice": "Verkaufspreis",
+      "mockup.shippingFee": "Versand + Gebühren",
+      "mockup.netProfit": "Nettogewinn",
+      "mockup.shoes": "Laufschuhe",
+      "mockup.shoesMeta": "Kleidung · Einkauf 66 PLN",
+      "mockup.listed": "Inseriert",
+      "mockup.game": "Brettspiel",
+      "mockup.gameMeta": "Hobby · Einkauf 35 PLN",
+      "mockup.toSell": "Zu verkaufen",
+      "mockup.tiedCash": "Gebundenes Kapital",
+      "pricing.label": "Preise",
+      "pricing.title": "Kostenlos starten.<br>Bei Bedarf auf Premium wechseln.",
+      "pricing.sub": "Mit der kostenlosen Version lernst du Reselio in Ruhe kennen. Premium schaltet den gesamten Ablauf ohne Limits frei.",
+      "pricing.free.label": "Kostenlos",
+      "pricing.free.amount": "0 PLN",
+      "pricing.free.desc": "Dauerhaft. Keine Kreditkarte nötig.",
+      "pricing.free.feature1": "Bestand und Einkäufe erfassen",
+      "pricing.free.feature2": "Import von 15 Plattformen",
+      "pricing.free.feature3": "Begrenzte Verkaufshistorie",
+      "pricing.free.feature4": "Alle Diagramme und Berichte",
+      "pricing.free.feature5": "CSV-Export",
+      "pricing.free.feature6": "Backup",
+      "pricing.free.cta": "Kostenlos laden",
+      "pricing.premium.label": "Premium",
+      "pricing.premium.amount": "Monatsabo",
+      "pricing.premium.desc": "Preis im App Store. Probephase verfügbar.",
+      "pricing.premium.feature1": "Alles aus der kostenlosen Version",
+      "pricing.premium.feature2": "Unbegrenzte Verkäufe",
+      "pricing.premium.feature3": "Alle Diagramme und Statistiken",
+      "pricing.premium.feature4": "CSV-Export",
+      "pricing.premium.feature5": "Backup und Wiederherstellung",
+      "pricing.premium.feature6": "Bevorzugter Support",
+      "pricing.premium.cta": "Probephase starten →",
+      "forwhom.label": "Für wen",
+      "forwhom.title": "Passt Reselio zu dir?",
+      "forwhom.sub": "Reselio ist für alle, die kaufen und weiterverkaufen –<br>ganz gleich, was und auf welcher Plattform.",
+      "persona.electronics.tag": "📦 Elektronik & Geräte",
+      "persona.electronics.quote": "\"Bei einem Dutzend Artikeln im Regal verliert man schnell den Überblick. Reselio zeigt mir, was inseriert ist, was noch wartet und welche Verkäufe wirklich Gewinn gebracht haben.\"",
+      "persona.electronics.desc": "Einkauf erfassen, auf OLX inserieren, Verkauf eintragen. Reselio berechnet den Rest – inklusive Gebühren und Versand.",
+      "persona.markets.tag": "🏪 Flohmärkte & Basare",
+      "persona.markets.quote": "\"Ich kaufe auf Märkten und verkaufe über Vinted. Früher wusste ich nie genau, ob am Ende wirklich etwas übrig bleibt.\"",
+      "persona.markets.desc": "Foto aufnehmen, Preis eintragen, Verkauf markieren. Alles wird berechnet – ohne Tabellen und ohne Computer.",
+      "persona.vintage.tag": "👗 Kleidung & Vintage",
+      "persona.vintage.quote": "\"Ich kaufe und verkaufe oft Secondhand-Kleidung. Das macht mir Spaß, aber handschriftliche Notizen zu Einkauf, Plattform und Verkauf wurden schnell zum Chaos.\"",
+      "persona.vintage.desc": "Partien, Mengen und Status wie inseriert, verkauft oder aussortiert. Reselio begleitet jeden Artikel durch den gesamten Ablauf.",
+      "results.label": "Ergebnis",
+      "results.title": "Ergebnis sehen.<br>Nicht mehr raten.",
+      "results.sub": "Reselio zeigt dir, was zählt – ganz ohne Rechnen im Notizbuch.",
+      "results.quick": "Ein Blick genügt und du weißt, wie es läuft",
+      "results.detail": "Alle Details, wenn du sie brauchst",
+      "cta.label": "Jetzt starten",
+      "cta.title": "Dein Reselling verdient Ordnung.",
+      "cta.sub": "Kostenlos laden. Ohne Reselio-Konto, ohne Datenchaos.",
+      "cta.appStoreTop": "Laden im",
+      "cta.appStoreMain": "App Store",
+      "footer.privacy": "Datenschutzerklärung",
+      "footer.terms": "Nutzungsbedingungen",
+      "footer.contact": "Kontakt",
+      "alt.heroScreen": "Bildschirm der Reselio App",
+      "alt.garden": "Verkäufe unterwegs auf dem Smartphone verwalten",
+      "alt.electronics": "Person beim Weiterverkauf von Elektronik",
+      "alt.markets": "Verkauf auf einem Flohmarkt",
+      "alt.vintage": "Kundin beim Stöbern in einem Secondhandladen",
+      "alt.summaryChart": "Auswertung mit Gewinndiagramm",
+      "alt.summaryDetails": "Auswertung mit Kostenübersicht"
     }
   };
 
@@ -1590,17 +1839,39 @@
   const localizedImages = {
     heroScreen: {
       pl: 'assets/app-screen.png',
-      en: 'assets/app-screen-en.png'
+      en: 'assets/app-screen-en.png',
+      es: 'assets/app-screen-en.png',
+      de: 'assets/app-screen-en.png'
     },
     summaryChart: {
       pl: 'assets/summary-chart.png',
-      en: 'assets/summary-chart-en.png'
+      en: 'assets/summary-chart-en.png',
+      es: 'assets/summary-chart-en.png',
+      de: 'assets/summary-chart-en.png'
     },
     summaryDetails: {
       pl: 'assets/summary-details.png',
-      en: 'assets/summary-details-en.png'
+      en: 'assets/summary-details-en.png',
+      es: 'assets/summary-details-en.png',
+      de: 'assets/summary-details-en.png'
     }
   };
+  const localizedLinks = {
+    privacy: {
+      pl: 'privacy.html',
+      en: 'privacy-en.html',
+      es: 'privacy-es.html',
+      de: 'privacy-de.html'
+    },
+    terms: {
+      pl: 'terms.html',
+      en: 'terms-en.html',
+      es: 'terms-es.html',
+      de: 'terms-de.html'
+    }
+  };
+
+  const supportedLanguages = ['pl', 'en', 'es', 'de'];
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const attr = el.dataset.i18nAttr;
@@ -1615,7 +1886,7 @@
   function getSavedLanguage() {
     try {
       const saved = localStorage.getItem('reselio-language');
-      return saved === 'pl' || saved === 'en' ? saved : null;
+      return supportedLanguages.includes(saved) ? saved : null;
     } catch (error) {
       return null;
     }
@@ -1637,7 +1908,12 @@
       ? navigator.languages
       : [navigator.language || ''];
 
-    return languages[0].toLowerCase().startsWith('pl') ? 'pl' : 'en';
+    for (const language of languages) {
+      const languageCode = String(language).toLowerCase().split('-')[0];
+      if (supportedLanguages.includes(languageCode)) return languageCode;
+    }
+
+    return 'en';
   }
 
   function updateLocalizedImages(lang) {
@@ -1645,6 +1921,14 @@
       const sources = localizedImages[img.dataset.localizedImage];
       const src = sources && (sources[lang] || sources.pl);
       if (src) img.setAttribute('src', src);
+    });
+  }
+
+  function updateLocalizedLinks(lang) {
+    document.querySelectorAll('[data-localized-link]').forEach((link) => {
+      const destinations = localizedLinks[link.dataset.localizedLink];
+      const href = destinations && (destinations[lang] || destinations.pl);
+      if (href) link.setAttribute('href', href);
     });
   }
 
@@ -1672,10 +1956,17 @@
       metaDescription.setAttribute('content', lang === 'pl' ? originalMeta.description : dictionary.metaDescription);
     }
     updateLocalizedImages(lang);
+    updateLocalizedLinks(lang);
 
     const switcher = document.querySelector('.language-switch');
     if (switcher) {
-      switcher.setAttribute('aria-label', lang === 'pl' ? 'Wybór języka' : 'Language selection');
+      const languageLabels = {
+        pl: 'Wybór języka',
+        en: 'Language selection',
+        es: 'Selección de idioma',
+        de: 'Sprachauswahl'
+      };
+      switcher.setAttribute('aria-label', languageLabels[lang] || languageLabels.en);
     }
 
     document.querySelectorAll('[data-lang-choice]').forEach((button) => {
